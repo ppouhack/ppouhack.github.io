@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git Commit Command"
+title: Git Commit Command
 featured-img: Git_Commit_Command
 category: Background
 ---
