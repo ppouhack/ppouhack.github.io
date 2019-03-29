@@ -114,7 +114,7 @@ Changes to be committed:
 |-a|저장소에 변경된 파일을 모두 커밋|**git commit -a -m**|
 
 ```apache
-shin@WIN-O8FOJ7C5O4C MINGW64 ~/ppou_git (master)
+<shin@WIN-O8FOJ7C5O4C MINGW64 ~/ppou_git (master)>
 $ git commit -m "first commit"
 ```
 
