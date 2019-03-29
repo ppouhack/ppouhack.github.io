@@ -517,7 +517,7 @@ $ git commit -m "added '.gitignore' file"
 
 commit 내역을 확인할 수 있는 명령어
 
-|목표|명령어|
+|Command|Description|
 |:---|:-----|
 |**git log -p**| 각 커밋에 적용된 실제 변경 내용을 보여줌|
 |**git log \-\-word-diff** | diff명령의 실행 결과를 단어 단위로 보여줌|
@@ -555,3 +555,12 @@ $ git log --graph
 | Date:   Fri Feb 8 15:38:38 2019 +0900
 |
 ```
+
+### revert
+
+---
+
+| Command|Description |
+|:-------------:|:-------:|
+|**git revert [체크섬값]**| 커밋으로 발생한 변경 내역의 반대 커밋을 실행|
+
