@@ -9,7 +9,6 @@ category: Etc
 
 ## tmux
 ---
-[http://blog.b1ue.sh/2016/10/10/tmux-tutorial/](http://blog.b1ue.sh/2016/10/10/tmux-tutorial/)
 
 tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background, then later reattached.
 
@@ -35,7 +34,30 @@ tmux is a terminal multiplexer: it enables a number of terminals to be created, 
 |ctrl + b, z|특정 윈도우를 전체화면으로 전환, 한번 더 누르면 원상태 복구|
 |ctrl + d|윈도우 닫기|
 
+**\# Referrence #**<br>
 [http://blog.b1ue.sh/2016/10/10/tmux-tutorial/](http://blog.b1ue.sh/2016/10/10/tmux-tutorial/)
+
+
+### tmux copy block
+---
+
+
+tmux.conf 를 만들어서 vi의 단축키를 사용할 수 있도록 설정합니다.
+
+```console
+root@kali:~/Desktop/htb/tenten# cat ~/.tmux.conf
+set-window-option -g mode-keys vi
+```
+session 안에서 `ctrl+b+:` 입력 후 다음 명령어를 입력합니다.
+
+```
+source-file ~/.tmux.conf
+```
+
+이후 `ctrl+b+]`를 통해서 블록 지정 `space`, 복사 `enter`, 붙여넣기 `ctrl+b+]`를 할 수 있습니다.
+
+**\# Referrence #**<br>
+[jupiny.tistory.com](https://jupiny.tistory.com/entry/tmux-%EC%B0%BD%EA%B3%BC-%EC%B0%BD-%EC%82%AC%EC%9D%B4%EC%97%90%EC%84%9C-%EB%B3%B5%EB%B6%99%ED%95%98%EA%B8%B0)
 
 ## nmap
 ---
