@@ -49,7 +49,7 @@ drwxrwxrwx  2 www-data www-data  4096 May 18 12:32 upload 		;check
 ---
 
 **apache는 DirectoryIndex 지시어**를 사용하여 디렉토리에 접근하였을 때 기본적으로 읽을 파일을 지정할 수 있습니다. 
-[https://httpd.apache.org/docs/2.4/ko/mod/mod_dir.html](https://httpd.apache.org/docs/2.4/ko/mod/mod_dir.html)
+
 
 ```console
 root@popcorn:/# find / -name "*.conf" | xargs grep DirectoryIndex 2>/dev/null
@@ -101,6 +101,10 @@ drwxr-xr-x 15 www-data www-data  4096 Mar 17  2017 ..
 -rw-r--r--  1 www-data www-data  4663 May 18 12:23 c466035da5de7b04df065831e87ac368456e7fbe.png
 -rw-r--r--  1 www-data www-data 33029 Jun  2  2007 noss.png
 ```
+
+### reference
+
+1. [https://httpd.apache.org/docs/2.4/ko/mod/mod_dir.html](https://httpd.apache.org/docs/2.4/ko/mod/mod_dir.html)
 
 ## 3) sourcecode
 ---
