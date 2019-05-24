@@ -3,6 +3,8 @@ layout: post
 title: "hack the box-popcorn"
 featured-img: hack_the_box
 category: Etc
+summary: FILE UPLOAD BYPASS
+
 ---
 
 **popcorn box**는 다음과 같은 순서로 root를 획득할 수 있습니다.
