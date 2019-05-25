@@ -3,6 +3,7 @@ layout: post
 title: Git Commit Command
 featured-img: Git_Commit_Command
 category: Background
+summary: Git Commit을 위한 명령어에 대해서 정리합니다.
 ---
 
 # Git
