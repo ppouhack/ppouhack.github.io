@@ -3,6 +3,7 @@ layout: post
 title: "hack the box intro"
 featured-img: hack_the_box
 category: Etc
+summary: tmux, nmap, searchsploit, burpsuite, python-pty-shells 
 ---
 
 `hack the box`에서 자주 사용되는 도구, 명령어를 정리해놓았습니다.

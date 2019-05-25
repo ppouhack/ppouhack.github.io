@@ -3,7 +3,7 @@ layout: post
 title: "hack the box-popcorn"
 featured-img: hack_the_box
 category: Etc
-summary: FILE UPLOAD BYPASS
+summary: File Upload Bypass
 
 ---
 
@@ -225,14 +225,14 @@ xclip을 사용하면 리눅스 터미널창에서 파일의 내용 또는 문�
 ```console
 root@kali:~/Desktop/popcorn/python-pty-shells# cat /usr/share/exploitdb/exploits/linux/local/14339.sh | xclip
 ```
----
+
 시스템의 모든 정보를 출력합니다.
 
-```bash
+```console
 www-data@popcorn:/home/george/.cache$ uname -a
 Linux popcorn 2.6.31-14-generic-pae #48-Ubuntu SMP Fri Oct 16 15:22:42 UTC 2009 i686 GNU/Linux
 ```
----
+
 설치된 패키지 리스트 출력
 
 ```console
@@ -242,4 +242,28 @@ ii  libpam-runtime                      1.1.0-2ubuntu1                    Runtim
 ii  libpam0g                            1.1.0-2ubuntu1                    Pluggable Authentication Modules library
 ii  python-pam                          0.4.2-12ubuntu3                   A Python interface to the PAM library
 ```
+
+home directory에 있는 정보를 열거합니다. 사용자 목록을 확인할 때 유용합니다.
+
+```bash
+www-data@popcorn:/var/www/torrent/upload$find /home -printf "%f\t%p\t%u\t%g\t%m\n" 2>/dev/null| column -t
+```
+
+|filename|path|user|group|file permission(m)|
+|------------|-------------|-------------|-------------|-------------|
+|home                       | /home                                     |root  |  root   | 755|
+|george                     | /home/george                              |george|  george | 755|
+|.bash_logout               | /home/george/.bash_logout                 |george|  george | 644|
+|.bashrc                    | /home/george/.bashrc                      |george|  george | 644|
+|torrenthoster.zip          | /home/george/torrenthoster.zip            |george|  george | 644|
+|.cache                     | /home/george/.cache                       |george|  george | 755|
+|motd.legal-displayed       | /home/george/.cache/motd.legal-displayed  |george|  george | 644|
+|.sudo_as_admin_successful  | /home/george/.sudo_as_admin_successful    |george|  george | 644|
+|user.txt                   | /home/george/user.txt                     |george|  george | 644|
+|.nano_history              | /home/george/.nano_history                |root  |  root   | 600|
+|.mysql_history             | /home/george/.mysql_history               |root  |  root   | 600|
+|.bash_history              | /home/george/.bash_history                |root  |  root   | 600|
+|.profile                   | /home/george/.profile                     |george|  george | 644|
+
+
 
