@@ -184,8 +184,8 @@ root@kali:/usr/share/wordlists# git clone https://github.com/danielmiessler/SecL
 \-w 옵션으로 문자열 사전을 지정하여 gobuster를 사용할 수 있습니다.
 
 ```console
-gobuster -w /usr/share/wordlists/SecLists/Discovery/Web-Content/big.txt -u http://10.10.10.5
-gobuster -w /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-large-files.txt -u http://10.10.10.5
+gobuster -w /usr/share/wordlists/SecLists/Discovery/Web-Content/big.txt -u http://10.10.10.5 -o gobusterresult.txt
+gobuster -w /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-large-files.txt -u http://10.10.10.5 -o gobusterresult.txt
 ```
 
 \-x 옵션으로 특정한 확장자를 지정할 수 있습니다. 
